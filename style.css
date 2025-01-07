@@ -1,0 +1,133 @@
+/* style.css */
+
+/* General Body Styling with a Background Image */
+body {
+  font-family: 'Playfair Display', serif; /* Stylish font for headings */
+  background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920') no-repeat center center fixed;
+  background-size: cover; /* Cover the entire screen */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+/* To-Do App Styling */
+.todo-app {
+  background: rgba(255, 255, 255, 0.85); /* Transparent white overlay */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #1d3557;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px #ccc;
+}
+
+/* Input Section Styling */
+.input-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif; /* Clean, modern font for inputs */
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #457b9d; /* Blue shade for buttons */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background-color: #1d3557;
+  transform: scale(1.05);
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f1f1f1;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+li:hover {
+  background-color: #eaeaea;
+  transform: scale(1.02);
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+li button {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .todo-app {
+    width: 90%;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  input {
+    font-size: 12px;
+  }
+}
